@@ -1,0 +1,69 @@
+
+.footer-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 100%;
+  margin: 0;
+  height: 110px;
+  padding: 5px;
+  position: relative; }
+  .footer-info p {
+    color: white;
+    position: absolute;
+    right: 0;
+    bottom: 0; }
+
+.ubicacion-info p {
+  color: #7b1411;
+  font-size: x-large;
+  font-family: cursive;
+  text-shadow: 1px 1px black; }
+
+.horarios-info {
+  display: contents; }
+  .horarios-info h4 {
+    animation: lamiglioreh1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; }
+    .horarios-info h4 strong {
+      color: #7b1411;
+      font-family: cursive;
+      margin: 0;
+      text-shadow: 2px 2px 1px black; }
+      .horarios-info h4 strong p {
+        margin: 20px 0; }
+
+.parrafo-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .parrafo-info p {
+    margin: 20px 20px;
+    color: white;
+    text-shadow: 1px 1px black;
+    font-size: large; }
+
+.contenedor-info {
+  display: flex;
+  background-image: url(../img/fff.png);
+  background-repeat: no-repeat;
+  background-position: unset;
+  background-size: cover; }
+  .contenedor-info h1 {
+    font-family: cursive;
+    color: #7b1411;
+    text-shadow: 2px 12px 10px black; }
+    .contenedor-info h1 h4 {
+      color: #B23531; }
+
+.contenedor-img-info img {
+  height: 114vh;
+  width: 500px;
+  margin: 20px;
+  border-radius: 10px; }
+
+#body-info {
+  height: 100vh;
+  background-color: lightyellow; }
