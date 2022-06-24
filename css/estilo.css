@@ -1,69 +1,497 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none; }
 
-.footer-info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.body-index {
+  overflow-x: hidden;
   background-color: black;
-  width: 100%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin: 0;
-  height: 110px;
-  padding: 5px;
-  position: relative; }
-  .footer-info p {
+  padding: 0; }
+
+@media screen and (max-width: 500px) {
+  .navbar-brand {
+    display: none; } }
+
+.section-principal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url(../img/fondo2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 5px; }
+  .section-principal .h1-index {
+    font-size: 80px;
+    font-family: unset;
+    text-shadow: 1px 3px 1px #7b1411;
+    margin: 0;
+    color: lightyellow;
+    animation: lamiglioreh1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; }
+
+@keyframes lamiglioreh1 {
+  0% {
+    transform: scale(1); }
+  20% {
+    transform: scale(0.3); }
+  40% {
+    transform: scale(0.6); }
+  60% {
+    transform: scale(0.9); }
+  80% {
+    transform: scale(1); } }
+  .section-principal .parrafo-principal {
+    text-shadow: 1px 1px 1px #7b1411;
+    color: lightyellow;
+    margin: 20px 20px;
+    font-size: x-large; }
+  .section-principal .boton-menu {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 50px;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: 2px solid #7b1411;
+    box-shadow: 3px 2px 7px #7b1411;
+    background-color: white; }
+    .section-principal .boton-menu .parrafo-menu {
+      text-decoration: none;
+      color: #7b1411;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      margin: 20; }
+
+.section-bebidas {
+  background-image: linear-gradient(#16184199, #16184199), url(/img/fondobebidas.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1240px;
+  height: 700px;
+  display: flex;
+  margin: 0 18px; }
+  .section-bebidas .contenedor-bebidas {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 30px;
+    margin: 10px 30px; }
+    .section-bebidas .contenedor-bebidas img {
+      width: 300px;
+      height: 400px;
+      margin: 0px 30px;
+      border: 2px solid white;
+      box-shadow: 2px 1px 5px white;
+      transition: all 300ms; }
+    .section-bebidas .contenedor-bebidas img:hover {
+      transform: scale(1.15); }
+
+.section-speciale {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background-color: black; }
+  .section-speciale .contenedor__texto-speciale {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    height: 350px;
+    margin: 0 90px; }
+    .section-speciale .contenedor__texto-speciale .h2__section__speciale {
+      display: inline-block;
+      position: relative;
+      width: 500px;
+      padding-inline-start: 130px;
+      text-shadow: 1px 4px 4px #16184199;
+      color: lightyellow; }
+    .section-speciale .contenedor__texto-speciale .h2__section__speciale::after, .section-speciale .contenedor__texto-speciale .h2__section__speciale::before {
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 2px;
+      background-color: white;
+      top: 20px; }
+    .section-speciale .contenedor__texto-speciale .h2__section__speciale::before {
+      left: 0; }
+    .section-speciale .contenedor__texto-speciale .h2__section__speciale::after {
+      right: 20px; }
+    .section-speciale .contenedor__texto-speciale .parrafo-speciale {
+      color: lightyellow; }
+
+.footer-index {
+  position: relative;
+  height: 100px; }
+  .footer-index .parrafo__footer__migliore {
     color: white;
     position: absolute;
     right: 0;
     bottom: 0; }
-
-.ubicacion-info p {
-  color: #7b1411;
-  font-size: x-large;
-  font-family: cursive;
-  text-shadow: 1px 1px black; }
-
-.horarios-info {
-  display: contents; }
-  .horarios-info h4 {
-    animation: lamiglioreh1;
-    animation-duration: 2s;
-    animation-iteration-count: infinite; }
-    .horarios-info h4 strong {
-      color: #7b1411;
-      font-family: cursive;
-      margin: 0;
-      text-shadow: 2px 2px 1px black; }
-      .horarios-info h4 strong p {
-        margin: 20px 0; }
-
-.parrafo-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-  .parrafo-info p {
-    margin: 20px 20px;
+  .footer-index .parrafo__footer__lucros {
     color: white;
-    text-shadow: 1px 1px black;
-    font-size: large; }
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    text-decoration: underline; }
+  .footer-index #boton-speciale {
+    position: absolute;
+    right: 40%;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+    padding: 10px 40px;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 1px 1px 1px #7b1411;
+    background-color: white; }
+    .footer-index #boton-speciale a {
+      color: #7b1411;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      text-decoration: none; }
+
+/*MENUU*/
+/*MENUU*/
+/*MENUU*/
+/*MENUU*/
+/*MENUU*/
+/*MENUU*/
+.body-menu {
+  background-image: url(../img/fondo33.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative; }
+
+.carta {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .carta h1 {
+    color: lightyellow;
+    text-shadow: 1px 4px 5px gray; }
+
+.section-menu {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 85%;
+  margin: 20px  auto; }
+  .section-menu .muza {
+    background-image: url(../img/MUU.png);
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border: 2px solid white;
+    margin: 20px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 2px 1px 5px white; }
+    .section-menu .muza h4 {
+      margin: 10px;
+      color: white;
+      text-shadow: 1px 1px 1px #7b1411; }
+    .section-menu .muza .p__muza, .section-menu .muza .marga p, .section-menu .marga .muza p, .section-menu .muza .portu p, .section-menu .portu .muza p, .section-menu .muza .carbo p, .section-menu .carbo .muza p, .section-menu .muza .casa p, .section-menu .casa .muza p, .section-menu .muza .quesos p, .section-menu .quesos .muza p {
+      font-size: larger;
+      margin: 0;
+      padding: 20px;
+      color: white;
+      text-shadow: 1px 1px 1px brown; }
+  .section-menu .marga {
+    background-image: url(../img/marga.png);
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border: 2px solid white;
+    margin: 20px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 2px 1px 5px white; }
+    .section-menu .marga h4 {
+      margin: 10px;
+      color: white;
+      text-shadow: 1px 1px 1px black; }
+  .section-menu .portu {
+    background-image: url(../img/portuga.png);
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border: 2px solid white;
+    margin: 20px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 2px 1px 5px white; }
+    .section-menu .portu h4 {
+      margin: 10px;
+      color: white;
+      text-shadow: 1px 1px 1px #7b1411; }
+    .section-menu .portu p {
+      text-shadow: 1px 1px 1px brown; }
+  .section-menu .carbo {
+    background-image: url(../img/carbonara.png);
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border: 2px solid white;
+    margin: 20px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 2px 1px 5px white; }
+    .section-menu .carbo h4 {
+      margin: 10px;
+      color: white;
+      text-shadow: 1px 1px 1px #7b1411; }
+    .section-menu .carbo p {
+      text-shadow: 1px 1px 1px black; }
+  .section-menu .casa {
+    background-image: url(../img/delacasa.png);
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border: 2px solid white;
+    margin: 20px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 2px 1px 5px white; }
+    .section-menu .casa h4 {
+      margin: 10px;
+      color: white;
+      text-shadow: 1px 1px 1px #7b1411; }
+    .section-menu .casa p {
+      text-shadow: 1px 1px 1px black; }
+  .section-menu .quesos {
+    background-image: url(../img/pizza-4-quesos.png);
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    border: 2px solid white;
+    margin: 20px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 2px 1px 5px white; }
+    .section-menu .quesos h4 {
+      margin: 10px;
+      color: white;
+      text-shadow: 1px 1px 1px #7b1411; }
+    .section-menu .quesos p {
+      text-shadow: 1px 1px 1px black; }
+
+/*CONTACTO*/
+/*CONTACTO*/
+/*CONTACTO*/
+/*CONTACTO*/
+/*CONTACTO*/
+/*CONTACTO*/
+#body-contacto {
+  height: 100%;
+  overflow: hidden;
+  background-color: lightyellow;
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
+  #body-contacto .section-form {
+    display: flex;
+    justify-content: flex-end;
+    height: 80vh; }
+    #body-contacto .section-form .formulario-contacto {
+      width: 500px;
+      height: 400px;
+      margin: 0px 40px;
+      border-radius: 3px; }
+      #body-contacto .section-form .formulario-contacto .form-contenedor {
+        padding: 40px; }
+        #body-contacto .section-form .formulario-contacto .form-contenedor p {
+          display: flex;
+          justify-content: center;
+          font-size: x-large;
+          font-weight: bolder; }
+        #body-contacto .section-form .formulario-contacto .form-contenedor .form-tablas {
+          width: 100%;
+          margin: 5px 0;
+          padding: 5px;
+          border: 2px solid black;
+          border-radius: 10px; }
+        #body-contacto .section-form .formulario-contacto .form-contenedor .form-boton {
+          margin: 30px 110px;
+          width: 200px;
+          height: 30px;
+          background: white;
+          color: black;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          font-size: medium;
+          font-weight: bolder;
+          border: 2px solid black;
+          border-radius: 10px; }
+  #body-contacto .parrafo-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 110px 10px;
+    height: 200px;
+    padding: 40px; }
+    #body-contacto .parrafo-form h4 {
+      color: white;
+      font-family: cursive;
+      text-shadow: 0px 1px 2px black;
+      animation: lamiglioreh1;
+      animation-duration: 2s;
+      animation-iteration-count: infinite; }
+
+@keyframes lamiglioreh1 {
+  0% {
+    transform: scale(1); }
+  20% {
+    transform: scale(0.3); }
+  40% {
+    transform: scale(0.6); }
+  60% {
+    transform: scale(0.9); }
+  80% {
+    transform: scale(1); } }
+      #body-contacto .parrafo-form h4 p {
+        font-size: large;
+        color: white; }
+    #body-contacto .parrafo-form .parrafo-form-img {
+      margin: 0 10px; }
+  #body-contacto .footer-contacto {
+    position: relative;
+    height: 100px;
+    background-color: black; }
+    #body-contacto .footer-contacto .parrafo__footer__migliore {
+      color: white;
+      position: absolute;
+      right: 0;
+      bottom: 0; }
+    #body-contacto .footer-contacto .parrafo__footer__lucros {
+      color: white;
+      position: absolute;
+      bottom: 30px;
+      left: 20px;
+      text-decoration: underline; }
+
+/*INFORMACION*/
+/*INFORMACION*/
+/*INFORMACION*/
+/*INFORMACION*/
+/*INFORMACION*/
+.body-info {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
 
 .contenedor-info {
   display: flex;
-  background-image: url(../img/fff.png);
-  background-repeat: no-repeat;
-  background-position: unset;
-  background-size: cover; }
-  .contenedor-info h1 {
-    font-family: cursive;
-    color: #7b1411;
-    text-shadow: 2px 12px 10px black; }
-    .contenedor-info h1 h4 {
-      color: #B23531; }
-
-.contenedor-img-info img {
-  height: 114vh;
-  width: 500px;
-  margin: 20px;
-  border-radius: 10px; }
-
-#body-info {
-  height: 100vh;
   background-color: lightyellow; }
+  .contenedor-info .parrafo-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .contenedor-info .parrafo-info h1 {
+      font-size: 70px;
+      font-family: cursive;
+      color: #7b1411;
+      text-shadow: 2px 12px 10px black; }
+    .contenedor-info .parrafo-info p {
+      margin: 20px 20px;
+      color: black;
+      font-size: large; }
+    .contenedor-info .parrafo-info .horarios-info {
+      display: contents; }
+      .contenedor-info .parrafo-info .horarios-info .h4-info {
+        color: #7b1411;
+        font-family: cursive;
+        font-size: 30px;
+        margin: 0;
+        animation: lamiglioreh1;
+        animation-duration: 2s;
+        animation-iteration-count: infinite; }
+      .contenedor-info .parrafo-info .horarios-info p {
+        margin: 20px 0; }
+    .contenedor-info .parrafo-info .iframe-info {
+      width: 700px;
+      height: 200px;
+      margin: 20px 20px; }
+    .contenedor-info .parrafo-info .ubicacion-info p {
+      color: #7b1411;
+      font-size: x-large;
+      font-family: cursive;
+      text-shadow: 1px 1px black; }
+  .contenedor-info .contenedor-img-info img {
+    height: 114vh;
+    width: 500px;
+    margin: 20px;
+    border-radius: 10px; }
+
+/* INDEX RESPONSIVEE */
+/* INDEX RESPONSIVEE */
+/* INDEX RESPONSIVEE */
+@media screen and (max-width: 1200px) {
+  .section-principal {
+    width: 1257px; }
+  header {
+    width: 1257px; }
+  .section-bebidas {
+    width: 1220px; } }
+
+@media screen and (max-width: 768px) {
+  .contenedor__imagen-speciale img {
+    height: 580px; } }
+
+@media screen and (max-width: 320px) {
+  .section-principal {
+    height: 800px; }
+  .section-speciale {
+    height: 800px; } }
+
+/*CONTACTO RESPONSIVE */
+/*CONTACTO RESPONSIVE */
+/*CONTACTO RESPONSIVE */
+/*CONTACTO RESPONSIVE */
+@media screen and (max-width: 1200px) {
+  #body-contacto {
+    width: 1240px;
+    height: 830px; }
+  #footer {
+    height: 200px; } }
+
+@media screen and (max-width: 768px) {
+  #body-contacto {
+    width: 780px; }
+  #section-form {
+    height: 500px; }
+  .parrafo-form {
+    margin: 0; } }
+
+@media screen and (max-width: 480px) {
+  #section-form {
+    height: 780px; }
+  #footer {
+    width: 780px; } }
+
+@media screen and (max-width: 480px) {
+  #section-form {
+    height: 900px; }
+  #footer {
+    height: 520px; } }
