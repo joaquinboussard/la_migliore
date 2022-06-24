@@ -1,236 +1,628 @@
-$color-principal:black;
-$color-secundario:#7b1411;
+@import "./parciales/mixins.scss";
 
-.footer-info{
+
+$colores: (
+    "principal": black,
+    "secundario": lightyellow,
+    "bordo": #7b1411,
+    "bebidas-gradient": #16184199,
+    );
+
+
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.body-index{
+    overflow-x: hidden;
+    background-color: map-get($colores, "principal");
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand{
+    @media screen and (max-width: 500px){
+        display:none; }
+}
+
+.section-principal{
     display: flex;
-    justify-content: center;
     align-items: center;
-    background-color: $color-principal;
-    width: 100%;
-    margin:0;
-    height: 110px;
-    padding: 5px;
-    position: relative;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url(../img/fondo2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 5px;
 
- p{
-    color: white;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    }
-}
+    .h1-index{
+        font-size: 80px;
+        font-family:unset;
+        text-shadow: 1px 3px 1px map-get($colores, "bordo");
+        margin: 0;
+        color: map-get($colores, "secundario");  
+        animation: lamiglioreh1;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        }
 
-.ubicacion-info{
-
-p{
-    color: $color-secundario;
-    font-size: x-large;
-    font-family: cursive;
-    text-shadow: 1px 1px $color-principal;
-    }
-}
-
-
-
-
-.horarios-info{
-    display: contents;
-
-         h4{
-            animation: lamiglioreh1;
-            animation-duration: 2s;
-            animation-iteration-count: infinite;  
-
-            strong{
-                color: $color-secundario;
-                font-family: cursive;
-                margin:0;
-                text-shadow: 2px 2px 1px $color-principal;
-
-              p{
-                margin: 20px 0;
+        @keyframes lamiglioreh1{
+            0%{
+                transform: scale(1);
             }
+            20%{
+                transform: scale(.3);
+            }
+            40%{
+                transform: scale(.6);
+            }
+            60%{
+                transform: scale(.9);
+            }
+            80%{
+                transform: scale(1);
+                }
+            }
+            .parrafo-principal{
+                text-shadow: 1px 1px 1px map-get($colores, "bordo");
+                color: map-get($colores, "secundario");
+                margin: 20px 20px;
+                font-size: x-large 
+            } 
+
+            .boton-menu{
+                font-size: 30px;
+                font-weight: bold;
+                margin: 50px;
+                padding: 10px 40px;
+                border-radius: 10px;
+                border: 2px solid map-get($colores, "bordo");
+                box-shadow: 3px 2px 7px map-get($colores, "bordo");
+                background-color:white;
+                .parrafo-menu{
+                    text-decoration: none;
+                    color: map-get($colores, "bordo");
+                    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    margin: 20;
+                    }
+
+                }
+            }
+
+.section-bebidas{
+    background-image:linear-gradient(map-get($colores, "bebidas-gradient"), map-get($colores, "bebidas-gradient")), url(/img/fondobebidas.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1240px;
+    height: 700px;
+    display: flex;
+    margin: 0 18px;
+
+
+    .contenedor-bebidas{
+        display: flex;
+       align-items: center;
+       flex-direction: row;
+       padding: 30px;
+       margin: 10px 30px;
+     
+     img{
+        width: 300px;
+        height: 400px;
+        margin: 0px 30px;
+        border: 2px solid white;
+        box-shadow: 2px 1px 5px white;
+        transition: all 300ms; 
+      }
+       
+        img:hover{
+            transform: scale(1.15) 
         }
     }
 }
 
 
-.parrafo-info{
+.section-speciale{
     display: flex;
-    flex-direction: column;
     align-items: center;
+    height: 100vh;
+    background-color: map-get($colores, "principal");
 
- p{
-    margin: 20px 20px;
-    color: white;
-    text-shadow: 1px 1px $color-principal;
-    font-size: large;
 
+    .contenedor__texto-speciale{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 500px;
+        height: 350px;
+        margin: 0 90px;
+
+        .h2__section__speciale{
+            display: inline-block;
+            position: relative;
+            width: 500px;
+            padding-inline-start: 130px;
+            text-shadow: 1px 4px 4px map-get($colores, "bebidas-gradient");
+            color: map-get($colores, "secundario");
+        }
+
+        .h2__section__speciale::after, .h2__section__speciale::before{ 
+            content:'';
+            position: absolute;
+            width: 100px;
+            height: 2px;
+            background-color: white;
+            top: 20px;
+            
+        } 
+        .h2__section__speciale::before{
+            left: 0;
+        }
+        .h2__section__speciale::after{
+            right: 20px;
+        }
+         
+        .parrafo-speciale{
+            color: map-get($colores, "secundario");  
+        }
     }
+}
+
+.footer-index{
+    position: relative;
+    height: 100px;
+    .parrafo__footer__migliore{
+        color: white;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    .parrafo__footer__lucros{
+        color: white;
+        position: absolute;
+        bottom: 30px;
+        left: 20px;
+        text-decoration: underline;
+    }
+    #boton-speciale{
+        position: absolute;
+        right: 40%;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px;
+        padding: 10px 40px;
+        border-radius: 10px;
+        border: 1px solid white;
+        box-shadow: 1px 1px 1px map-get($colores, "bordo");
+        background-color: white;
+        a{
+            color: map-get($colores, "bordo");
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;    
+            text-decoration: none;
+         }
+    }
+}
+
+
+/*MENUU*/ /*MENUU*/ /*MENUU*/ /*MENUU*/ /*MENUU*/ /*MENUU*/
+
+.body-menu{
+    background-image: url(../img/fondo33.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center ;
+    position: relative;
+}
+
+.carta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1{
+        color: map-get($colores, "secundario");
+        text-shadow: 1px 4px 5px gray;
+    }    
+   
+}
+
+.section-menu{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 85%;
+    margin: 20px  auto;
+
+    .muza{
+        background-image: url(../img/MUU.png);
+        @include menu;
+
+        h4{
+            margin: 10px;
+            color: white;
+            text-shadow: 1px 1px 1px map-get($colores, "bordo");
+        }
+
+        .p__muza{
+            font-size: larger;
+            margin: 0;
+            padding: 20px;
+            color: white;
+            text-shadow: 1px 1px 1px brown; 
+        }
+    }
+    
+    .marga{
+        background-image: url(../img/marga.png);
+        @include menu;
+        
+        h4{
+            margin: 10px;
+            color: white;
+            text-shadow: 1px 1px 1px black;
+        }
+
+        p{
+           @extend .p__muza;
+        }
+    }
+
+    .portu{
+        background-image: url(../img/portuga.png);
+        @include menu;
+    
+        h4{
+            margin: 10px;
+            color: white;
+            text-shadow: 1px 1px 1px map-get($colores, "bordo");
+        }    
+
+        p{
+            @extend .p__muza;
+            text-shadow: 1px 1px 1px brown;
+        }
+    } 
+
+    .carbo{
+        background-image: url(../img/carbonara.png);
+        @include menu;
+    
+        h4{
+            margin: 10px;
+            color: white;
+            text-shadow: 1px 1px 1px map-get($colores, "bordo");
+        }
+
+        p{
+            @extend .p__muza;
+            text-shadow: 1px 1px 1px black;
+        }
+    }
+
+    .casa{
+        background-image: url(../img/delacasa.png);
+        @include menu;
+        
+        h4{
+            margin: 10px;
+            color: white;
+            text-shadow: 1px 1px 1px map-get($colores, "bordo");
+        }
+
+        p{
+            @extend .p__muza;
+            text-shadow: 1px 1px 1px black;
+        }
+    }
+
+    .quesos{
+        background-image: url(../img/pizza-4-quesos.png);
+        @include menu;
+        h4{
+            margin: 10px;
+            color: white;
+            text-shadow: 1px 1px 1px map-get($colores, "bordo");
+        }
+        
+        p{
+            @extend .p__muza;
+            text-shadow: 1px 1px 1px map-get($colores, "principal");
+        }
+    }
+    
+}
+
+/*CONTACTO*/ /*CONTACTO*/ /*CONTACTO*/ /*CONTACTO*/ /*CONTACTO*/ /*CONTACTO*/
+
+#body-contacto{
+    height: 100%;
+    overflow: hidden;
+    background-color: map-get($colores, "secundario");
+    background-repeat: repeat-x;
+    background-size: cover;
+    background-position: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    .section-form{
+        display: flex;
+        justify-content: flex-end;
+        height: 80vh;
+        .formulario-contacto{
+            width: 500px;
+            height: 400px;
+            margin: 0px 40px;
+            border-radius: 3px; 
+            .form-contenedor{
+                padding: 40px;
+               
+                p{
+                display: flex;
+                justify-content: center;
+                font-size: x-large;
+                font-weight: bolder;
+                }
+
+                .form-tablas{
+                width: 100%;
+                margin: 5px 0;
+                padding: 5px;
+                border: 2px solid map-get($colores, "principal");
+                border-radius: 10px;  
+                }
+
+                .form-boton{
+                    margin: 30px 110px;
+                    width: 200px;
+                    height: 30px;
+                    background: white;
+                    color: map-get($colores, "principal");
+                    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    font-size: medium;
+                    font-weight: bolder;
+                    border: 2px solid map-get($colores, "principal");
+                    border-radius: 10px; 
+                }  
+            }
+
+        }
+    }   
+    
+    .parrafo-form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 110px 10px;
+        height: 200px;
+        padding: 40px;
+
+        h4{
+            color: white;
+            font-family: cursive;
+            text-shadow: 0px 1px 2px map-get($colores, "principal");
+            animation: lamiglioreh1;
+            animation-duration: 2s;
+            animation-iteration-count: infinite; 
+           
+            @keyframes lamiglioreh1{
+                0%{
+                    transform: scale(1);
+                }
+                20%{
+                    transform: scale(.3);
+                }
+                40%{
+                    transform: scale(.6);
+                }
+                60%{
+                    transform: scale(.9);
+                }
+                80%{
+                    transform: scale(1);
+                }
+            }    
+
+            p{
+                font-size: large;
+                color: white; 
+            }
+        }
+
+        .parrafo-form-img{
+            margin: 0 10px;
+        }
+    }
+
+
+    .footer-contacto{
+        position: relative;
+        height: 100px;
+        background-color: map-get($colores, "principal");
+
+        .parrafo__footer__migliore{
+        color: white;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        }
+        .parrafo__footer__lucros{
+        color: white;
+        position: absolute;
+        bottom: 30px;
+        left: 20px;
+        text-decoration: underline;
+        }
+    
+    }
+
+}
+
+/*INFORMACION*/ /*INFORMACION*/ /*INFORMACION*/ /*INFORMACION*/ /*INFORMACION*/
+
+.body-info{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .contenedor-info{
     display: flex;
-    background-image: url(../img/fff.png);
-    background-repeat: no-repeat;
-    background-position:unset;
-    background-size: cover;
-   
- h1{
-    font-family: cursive;
-    color: $color-secundario;
-    text-shadow: 2px 12px 10px $color-principal;
+    background-color: map-get($colores, "secundario");
 
- h4{
-    color: #B23531;
+    .parrafo-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+         h1{
+        font-size: 70px;
+        font-family: cursive;
+        color: #7b1411;
+        text-shadow: 2px 12px 10px map-get($colores, "principal");
+        }
+
+         p{
+        margin: 20px 20px;
+        color: map-get($colores, "principal");
+        font-size: large;
+        }
+
+        .horarios-info{
+            display: contents;
+        
+            .h4-info{
+            color: map-get($colores, "bordo");
+            font-family: cursive;
+            font-size: 30px;
+            margin:0;
+            animation: lamiglioreh1;
+            animation-duration: 2s;
+            animation-iteration-count: infinite; 
+            } 
+
+            p{
+            margin: 20px 0;
+            }
+            
+        }
+
+        .iframe-info{
+            width: 700px;
+            height: 200px;
+            margin: 20px 20px;
+        }
+
+        .ubicacion-info{
+            p{
+            color: map-get($colores, "bordo");
+            font-size: x-large;
+            font-family: cursive;
+            text-shadow: 1px 1px map-get($colores, "principal")
+             }
+        }
+
+    }
+    .contenedor-img-info{
+        img{
+        height: 114vh;
+        width: 500px;
+        margin: 20px;
+        border-radius: 10px;
         }
     }
+
 }
 
-.contenedor-img-info {
-img{
-    height: 114vh;
-    width: 500px;
-    margin: 20px;
-    border-radius: 10px;
+/* INDEX RESPONSIVEE */ /* INDEX RESPONSIVEE */ /* INDEX RESPONSIVEE */
+
+@media screen and (max-width: 1200px) {
+    .section-principal{
+        width: 1257px;
+    }
+    header{
+        width: 1257px;
+    }
+    .section-bebidas{
+        width: 1220px;
+    }
 }
+
+@media screen and (max-width:768px) {
+    .contenedor__imagen-speciale img{
+        height: 580px;
+    }
+}
+
+@media screen and (max-width:480px){
+
+}
+
+    
+@media screen and (max-width:320px) {
+    .section-principal{
+        height: 800px;
+    }
+    .section-speciale{
+        height: 800px;
+    }
 }
 
 
-#body-info{
-    height: 100vh;
-    background-color: lightyellow;
-}
 
+/*CONTACTO RESPONSIVE */ /*CONTACTO RESPONSIVE */ /*CONTACTO RESPONSIVE */ /*CONTACTO RESPONSIVE */
 
+/*EN MANTENIMIENTO */ /*EN MANTENIMIENTO */ /*EN MANTENIMIENTO */ /*EN MANTENIMIENTO */ /*EN MANTENIMIENTO */
 
 @media screen and (max-width:1200px){
-
-    .contenedor-img-info img{
-        width: 400px;
-        height: 700px;
+    #body-contacto{
+        width: 1240px;
+        height: 830px;
     }
 
-    #body-info{
-        width: 1200px;
+    #footer{
+        height: 200px;
     }
 }
 
-
-
-@media screen and (max-width:768px){
-    .contenedor-info{
-        width: 770px;
-    }
-    .parrafo-info{
-        width: 400px;
-    }
-    .parrafo-info h1{
-        margin:0px 10px;
-        font-size: xx-large;
-    }
-    .parrafo-info p{
-        margin: 5px;
-        font-size: medium;
+@media screen and (max-width:768px) {
+    #body-contacto{
+        width: 780px;
     }
 
-    .contenedor-img-info img{
+    #section-form{
         height: 500px;
-        width: 330px;
+
     }
 
-    .contenedor-img-info{
-        height: 500px;
-        width: 500px;
+    .parrafo-form{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:480px){
+    #section-form{
+        height: 780px;
     }
 
-    iframe{
-        width: 400px;
+    #footer{
+        width: 780px;
     }
-    
-    #body-info{
-        width: 770px;
-    }
+
 }
 
 
 @media screen and (max-width:480px){
- .contenedor-info{
-    width: 480px;
-    height: 602px;
-}
-.parrafo-info{
-    width: 250px;
-}
-.parrafo-info h1{
-    color: $color-secundario;
-   font-size: xx-large;
-}
-.parrafo-info p{
-   font-size: small;
-}
 
-.contenedor-img-info img{
-   width: 220px;
-   height: 540px;
-}
-
-.contenedor-img-info{
-   width: 300px;
-   height: 350px;
-}
-.horarios-info{
-    display: none;
-}
-iframe{
-    display: none;
-}
-
-.ubicacion-info p{
-    color: $color-secundario;
-    font-size: small;
-}
-
-.footer-info{
-    height: 60px;
-}
-
-#body-info{
-    width: 480px;
-}
-
-}
-
-
-
-@media screen and (max-width:320px){
-    .contenedor-info{
-       width: 332px;
-    }
-    .parrafo-info{
-        width: 332px;
-    }
-    .parrafo-info h1{
-       font-size:x-large;
-       margin: 10px 0;
-    }
-    .parrafo-info p{
-       font-size: small;
-    }
-    
-    
-    .contenedor-img-info{
-      display: none;
-    }
-    
-    .footer-info p{
-       font-size: x-small;
+    #section-form{
+        height: 900px;
     }
 
-    #body-info{
-        width: 332px;
+    #footer{
+        height: 520px;
     }
-
-
 }
+
