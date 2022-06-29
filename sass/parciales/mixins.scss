@@ -1,13 +1,26 @@
 @mixin menu {
     align-items: center;
     justify-content: center;
-    width: 300px;
+    width: 400px;
     height: 300px;
-    border: 2px solid white;
     margin: 20px;
     text-align: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    box-shadow: 2px 1px 5px white;
+    
 }
+
+@mixin p__muza {
+    font-size: larger;
+    font-weight: 800;
+    margin: 0;
+    padding: 20px;
+    color: black;
+    text-shadow: 2px 1px 1px white; 
+}
+
+
+
+
+

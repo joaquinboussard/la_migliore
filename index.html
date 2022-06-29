@@ -10,6 +10,8 @@
     <meta name="description" content="Pizzeria oriunda de Rivera, Uruguay. Productos caseros con mucha variedad de sabores.">
     <meta name="keywords" content="Pizza, Pizzeria, Comida, Pizzeria en Rivera, casero, pizzeria livramento">
   </head>
+
+  <!--Barra de navegacion-->
   <body class="body-index">
     <header>
       <nav class="navbar navbar-dark bg-dark">
@@ -30,7 +32,7 @@
                 <a class="nav-link" href="./seccion/info.html">Informacion</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./seccion/delivery.html">Delivery</a>
+                <a class="nav-link" href="#delivery">Delivery</a>
               </li>
               </ul>
                 <span class="navbar-text">
@@ -40,12 +42,20 @@
       </nav> 
     </header>
 
+    <!--Primera seccion-->
     <main class="section-principal">
       <h1 class="h1-index"> La Migliore</h1>
       <p class="parrafo-principal"> Pizzeria oriunda de Rivera, Uruguay. <br>¡Productos caseros con mucha variedad de sabores!</p>
-      <button class="boton-menu"><a class="parrafo-menu" href="../seccion/menu.html">Menú</a></button>
+      <button class="boton-menu"> 
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <a class="parrafo__boton__menu" href="./seccion/menu.html">Menu</a>
+      </button>
     </main>
 
+    <!--Segunda seccion-->
     <section class="section-speciale"> 
       <div class="contenedor__texto-speciale">
         <h2 class="h2__section__speciale">La Pizza Speciale</h2>
@@ -56,15 +66,18 @@
       </div>
     </section>
 
-    <section class="section-bebidas">
-      <div class="contenedor-bebidas"> 
-       <img src="./img/ duplo.png" width="60px" height="60px" alt="">
-       <img src="./img/coca.png" width="60px" height="60px"alt="">
-       <img src="./img/ guarana.png"width="60px" height="60px" alt="">
+    <!--Tercera seccion-->
+    <div class="contenedor__parrafo__img"> 
+      <div class="contenedor__parrafo__delivery">
+        <h2><a id="delivery"></a>¡Pedila! Nosotros te la llevamos </h2>
       </div>
-    </section>
+      <div class="contendor__img__delivery">
+          <img src="/img/delivery2.png" alt="">
+      </div>
+    </div>
 
-    <footer class="footer-index"> 
+    <!--Footer index-->
+    <footer id="footer-index"> 
       <p class="parrafo__footer__migliore"> Migliore 2022</p> 
       <p class="parrafo__footer__lucros"> Página sin fines de lucro ni comerciales</p>
     </footer>

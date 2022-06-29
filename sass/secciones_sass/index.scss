@@ -1,0 +1,346 @@
+$colores: (
+    "principal": black,
+    "secundario": lightyellow,
+    "bordo": #7b1411,
+    "bebidas-gradient": #16184199,
+    );
+
+
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    
+}
+
+header{
+    width: 1163px;
+}
+
+
+.body-index{
+    overflow-x: hidden;
+    background-color: map-get($colores, "principal");
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-brand{
+    @media screen and (max-width: 500px){
+        display:none; }
+}
+
+
+.section-principal{
+    @extend %display;
+    text-align: center;
+    height: 100vh;
+    width: 1163px;
+    background-image: url(../img/fondo2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 5px;
+
+            .h1-index{
+            font-size: 80px;
+            font-family:unset;
+            text-shadow: 1px 3px 1px map-get($colores, "bordo");
+            margin: 0;
+            color: map-get($colores, "secundario");  
+            animation: lamiglioreh1;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            }
+
+             @keyframes lamiglioreh1{
+            0%{
+                transform: scale(1);
+            }
+            20%{
+                transform: scale(.3);
+            }
+            40%{
+                transform: scale(.6);
+            }
+            60%{
+                transform: scale(.9);
+            }
+            80%{
+                transform: scale(1);
+                }
+            }
+            .parrafo-principal{
+                text-shadow: 1px 1px 1px map-get($colores, "bordo");
+                color: map-get($colores, "secundario");
+                margin: 20px 20px;
+                font-size: x-large 
+            } 
+
+            .boton-menu{
+                margin: 50px 0;
+                border-radius: 5px;
+                width: 150px;
+                position: relative;
+                padding: 10px 15px;
+                border: none;
+                outline: none;
+                background-color: lightyellow;
+                backdrop-filter: blur(2px);
+                color: map-get($colores, "bordo");  
+                cursor: pointer; 
+                transition:.5s ;
+                overflow: hidden;
+
+                .parrafo__boton__menu{
+                    text-decoration: none;
+                    font-size: 20px;
+                    color:map-get($colores, "bordo");
+                    font-weight: 700;
+                }
+                    span{
+                    position: absolute;
+                    background-color:map-get($colores, "bordo" );
+                    transition: .5s;
+                    }
+                    span:nth-child(1){
+                    width: 100%;
+                    height: 3px;
+                    top: 0;
+                    left: -100%;
+                    }
+                    span:nth-child(2){
+                    width: 100%;
+                    height: 3px;
+                    bottom: 0;
+                    right: -100%;
+                    }
+                    span:nth-child(3){
+                    width: 3px;
+                    height: 100%;
+                    bottom: -100%;
+                    left: 0;
+                    }
+                    span:nth-child(4){
+                    width: 3px;
+                    height: 100%;
+                    top: -100%;
+                    right: 0;
+                    }  
+            }
+
+            .boton-menu:hover span:nth-child(1){
+                left: 0;
+            }
+            .boton-menu:hover span:nth-child(2){
+                right: 0;
+            }
+            .boton-menu:hover span:nth-child(3){
+                bottom: 0;
+            }
+            .boton-menu:hover span:nth-child(4){
+                top: 0;
+            }
+        
+        
+} 
+        
+.contenedor__parrafo__img{
+    display: flex;
+    padding: 30px;
+    margin: 40px;
+    height: 90vh;
+    background-image: url(/img/desenfoque.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    .contenedor__parrafo__delivery{
+        margin: 20px;
+        width: 300px;
+
+        h2{
+            font-size: 70px;
+            color: lightyellow;
+            padding: 20px;
+            margin: 20px;
+        }
+    }
+
+    .contendor__img__delivery{
+        width: 500px;
+        margin: 30px;
+
+        img{
+            width: 620px;
+            border-radius: 20px;
+            height: 400px;
+            transition: 4s ease all;
+        }
+    }
+}   
+
+
+
+.section-speciale{
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: map-get($colores, "principal");
+
+
+    .contenedor__texto-speciale{
+        @extend %display;
+        width: 500px;
+        height: 350px;
+        margin: 0 90px;
+
+        .h2__section__speciale{
+            display: inline-block;
+            position: relative;
+            width: 500px;
+            padding-inline-start: 130px;
+            text-shadow: 1px 4px 4px map-get($colores, "bebidas-gradient");
+            color: map-get($colores, "secundario");
+        }
+        .h2__section__speciale::after, .h2__section__speciale::before{ 
+            content:'';
+            position: absolute;
+            width: 100px;
+            height: 2px;
+            background-color: white;
+            top: 20px;
+            
+        } 
+        .h2__section__speciale::before{
+            left: 0;
+        }
+        .h2__section__speciale::after{
+            right: 20px;
+        }
+         
+        .parrafo-speciale{
+            color: map-get($colores, "secundario");  
+        }
+    }
+    .contenedor__imagen-speciale{
+        img{
+            height: 580px;
+        }
+    }
+}
+
+
+.body-delivery{
+    height: 90vh;
+    background-color: black;
+    .contenedor__parrafo__img{
+        display: flex;
+        padding: 30px;
+        margin: 40px;
+        .contenedor__parrafo__delivery{
+            margin: 20px;
+            width: 300px;
+
+            h2{
+                font-size: 70px;
+                color: lightyellow;
+                padding: 20px;
+                margin: 20px;
+            }
+        }
+
+        .contendor__img__delivery{
+            width: 500px;
+            margin: 30px;
+            img{
+                width: 500px;
+                border-radius: 20px;
+                height: 400px;
+            }
+        }
+    }   
+}
+
+
+
+
+#footer-index{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background-color:  map-get($colores, "principal");
+    .parrafo__footer__migliore{
+        color: white;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    .parrafo__footer__lucros{
+        color: white;
+        position: absolute;
+        bottom: 10px;
+        left: 20px;
+    }
+    #boton-speciale{
+        position: absolute;
+        right: 40%;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px;
+        padding: 10px 40px;
+        border-radius: 10px;
+        border: 1px solid white;
+        box-shadow: 1px 1px 1px map-get($colores, "bordo");
+        background-color: white;
+        a{
+            color: map-get($colores, "bordo");
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;    
+            text-decoration: none;
+         }
+    }
+}
+
+
+/*RESPONSIVE */ /*RESPONSIVE */ /*RESPONSIVE */ /*RESPONSIVE */
+
+@media screen and(max-width:1200px){
+    header{
+        width: 100%;
+    }
+    .section-principal{
+        width: 100%;
+    }
+}
+
+@media screen and(max-width:768px) {
+    .body-index{
+        width: 1100px;
+    }
+
+    .contenedor__imagen-speciale{
+        img{
+            height: 500px;
+            padding: 30px;
+        }
+    }
+    .contenedor__parrafo__img{
+        margin: 20px;
+    }
+    .contendor__img__delivery{
+        img{
+            width: 550px;
+            transition: none;
+        }
+    }
+
+}
+
+ @media screen and(max-width:768px){
+     .section-principal{
+         height: 110vh;
+     }
+    .contenedor__parrafo__img{
+        height: 100vh;
+    }
+}
