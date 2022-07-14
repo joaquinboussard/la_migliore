@@ -10,11 +10,13 @@
     <meta name="description" content="Pizzeria oriunda de Rivera, Uruguay. Productos caseros con mucha variedad de sabores.">
     <meta name="keywords" content="Pizza, Pizzeria, Comida, Pizzeria en Rivera, casero, pizzeria livramento">
 </head>
-                         <!--Barra de navegacion-->
+       
+<!--Barra de navegacion-->
+<body class="body-menu"> 
   <header>
      <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">La Migliore</a>
+          <a class="navbar-brand" href="../index.html">La Migliore</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
           </button>
@@ -29,6 +31,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="./info.html">Informacion</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./galeria.html">Galeria</a>
+              </li>
               </ul>
                 <span class="navbar-text">
               </ul>
@@ -37,55 +42,160 @@
       </nav> 
    </header>
 
-<body class="body-menu">
+     <!--TITULO MENU-->
+    <div class="titulo__menu">
+      <h2>Menu</h2>
+    </div>
+    
 
-  <div class="contenedor__section">
+      <!--LINEA SEPARADORA-->
+    <span class="linea"></span>
+
+
+    <!--SECTION MENU-->
+    <section class="menu">
+
+      <a href="#imagen1"> 
+        <img src="../img/MUU.png" alt="pizza Muzzarella">
+      </a>
+    
+      <a href="#imagen2">
+        <img src="../img/delacasa.png" alt="pizza completa">
+      </a>
       
-    <!--EL MENU-->
-      <main class="section-menu"> 
-        <div class="muza">
-          <h4 class="h4__menu"> Muzzarella</h4>
-          <div class="contenedor__imagen__muza">
-            <a href="../menu_paginas/muza.html"> <img src="../img/MUU.png"> </a> 
-          </div>
+      <a href="#imagen3">
+        <img src="../img/marga.png" alt="pizza margarita">
+      </a>
+
+      <a href="#imagen4">
+        <img src="../img/f1467d9f-ca0c-4175-b621-49bcfa12708d.png" alt="pizza carbonara">
+      </a>
+
+      <a href="#imagen5">
+        <img src="../img/portuga.png" alt="pizza portuguesa">
+      </a>
+
+      <a href="#imagen6">
+        <img src="../img/pizza-4-quesos.png" alt="pizza-4-quesos">
+      </a>
+    </section>
+
+     <span class="linea"></span>
+     
+    <!--MUZZARELLA-->
+    <article class="articulo_galeria" id="imagen1"> 
+      <img class="muza" src="../img/MUU.png" alt="pizza Muzzarella"> 
+      <div class="parrafo-muza">
+      <h5>Muzzarella</h5>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A maiores, ea aspernatur ipsam sunt dolorum ratione recusandae, ullam corporis voluptatibus, perspiciatis reprehenderit repellat delectus mollitia ad temporibus accusamus nostrum animi.</p>
+      <p class="precio"> 1 Metro---<i class="fa-solid fa-dollar-sign">520</i></p>
+      <p class="precio"> 1/2 Metro---<i class="fa-solid fa-dollar-sign">320</i></p>
+      </div>
+      <a href="#imagen2" class="siguiente"><i class="fa-solid fa-arrow-right"></i> </a>
+      <a href="" class="cerrar">X</a>
+    </article>
+
+    <!-- PIZZA DE LA CASA-->
+    <article class="articulo_galeria" id="imagen2"> 
+      <a href="#imagen1" class="siguiente"><i class="fa-solid fa-arrow-left"></i></a>
+      <img class="casa" src="../img/delacasa.png" alt="pizza completa">
+      <div class="parrafo-muza">
+        <h5>De la Casa</h5>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A maiores, ea aspernatur ipsam sunt dolorum ratione recusandae, ullam corporis voluptatibus, perspiciatis reprehenderit repellat delectus mollitia ad temporibus accusamus nostrum animi.</p>
+        <p class="precio"> 1 Metro---<i class="fa-solid fa-dollar-sign">520</i></p>
+        <p class="precio"> 1/2 Metro---<i class="fa-solid fa-dollar-sign">320</i></p>
         </div>
-  
-        <div class="marga"> 
-          <h4 class="h4__marga"> Margarita</h4>
-          <div class="contenedor__imagen__marga">
-            <a href="../menu_paginas/marga.html"><img src="../img/marga.png" alt=""></a>
-          </div>
+      <a href="#imagen3" class="siguiente"><i class="fa-solid fa-arrow-right"></i> </a>
+      <a href="" class="cerrar">X</a>
+    </article>
+
+    <!-- PIZZA MARGARITA-->
+    <article class="articulo_galeria" id="imagen3"> 
+      <a href="#imagen2" class="siguiente"><i class="fa-solid fa-arrow-left"></i></a>
+      <img class="marga" src="../img/marga.png" alt="pizza margarita">
+      <div class="parrafo-muza">
+        <h5>Margarita</h5>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A maiores, ea aspernatur ipsam sunt dolorum ratione recusandae, ullam corporis voluptatibus, perspiciatis reprehenderit repellat delectus mollitia ad temporibus accusamus nostrum animi.</p>
+        <p class="precio"> 1 Metro---<i class="fa-solid fa-dollar-sign">520</i></p>
+        <p class="precio"> 1/2 Metro---<i class="fa-solid fa-dollar-sign">320</i></p>
+        </div>
+      <a href="#imagen4" class="siguiente"><i class="fa-solid fa-arrow-right"></i> </a>
+      <a href="" class="cerrar">X</a>
+    </article>
+
+    <!-- PIZZA CARBONARA-->
+    <article class="articulo_galeria" id="imagen4"> 
+      <a href="#imagen3" class="siguiente"><i class="fa-solid fa-arrow-left"></i></a>
+      <img class="carbonara" src="../img/f1467d9f-ca0c-4175-b621-49bcfa12708d.png" alt="pizza carbonara">
+      <div class="parrafo-muza">
+        <h5>Carbonara</h5>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A maiores, ea aspernatur ipsam sunt dolorum ratione recusandae, ullam corporis voluptatibus, perspiciatis reprehenderit repellat delectus mollitia ad temporibus accusamus nostrum animi.</p>
+        <p class="precio"> 1 Metro---<i class="fa-solid fa-dollar-sign">520</i></p>
+        <p class="precio"> 1/2 Metro---<i class="fa-solid fa-dollar-sign">320</i></p>
+        </div>
+      <a href="#imagen5" class="siguiente"><i class="fa-solid fa-arrow-right"></i> </a>
+      <a href="" class="cerrar">X</a>
+    </article>
+
+    <!-- PIZZA PORTUGUESA-->
+    <article class="articulo_galeria" id="imagen5"> 
+      <a href="#imagen4" class="siguiente"><i class="fa-solid fa-arrow-left"></i></a>
+      <img class="portuguesa" src="../img/portuga.png" alt="pizza portuguesa">
+      <div class="parrafo-muza">
+        <h5>Portuguesa</h5>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A maiores, ea aspernatur ipsam sunt dolorum ratione recusandae, ullam corporis voluptatibus, perspiciatis reprehenderit repellat delectus mollitia ad temporibus accusamus nostrum animi.</p>
+        <p class="precio"> 1 Metro---<i class="fa-solid fa-dollar-sign">520</i></p>
+        <p class="precio"> 1/2 Metro---<i class="fa-solid fa-dollar-sign">320</i></p>
+        </div>
+      <a href="#imagen6" class="siguiente"><i class="fa-solid fa-arrow-right"></i> </a>
+      <a href="" class="cerrar">X</a>
+    </article>
+
+    <!-- PIZZA 4 QUESOS-->
+    <article class="articulo_galeria" id="imagen6"> 
+      <a href="#imagen5" class="siguiente"><i class="fa-solid fa-arrow-left"></i></a>
+      <div class="parrafo-muza">
+        <h5>4 Quesos</h5>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A maiores, ea aspernatur ipsam sunt dolorum ratione recusandae, ullam corporis voluptatibus, perspiciatis reprehenderit repellat delectus mollitia ad temporibus accusamus nostrum animi.</p>
+        <p class="precio"> 1 Metro---<i class="fa-solid fa-dollar-sign">520</i></p>
+        <p class="precio"> 1/2 Metro---<i class="fa-solid fa-dollar-sign">320</i></p>
+        </div>
+      <img class="quesos" src="../img/pizza-4-quesos.png" alt="pizza 4 quesos">
+      <a href="" class="cerrar">X</a>
+    </article>
+
+
+    <!--FOOTER-->
+    <footer id="footer-index"> 
+      <div class="container">
+
+        <div class="info">
+          <h3>Direccion</h3>
+          <p>Ansina 547, 40000 Rivera, Departamento de Rivera</p>
         </div>
 
-        <div class="portu">
-          <h4>Portuguesa</h4>
-          <div class="contenedor__imagen__portu">
-            <a href="../menu_paginas/portu.html"><img src="../img/portuga.png" alt=""></a>
-          </div>
+
+        <div class="info">
+          <i class="fa-solid fa-motorcycle"></i>
         </div>
 
-        <div class="carbo">
-          <h4>Carbonara</h4>
-          <div class="contenedor__imagen__carbo">
-            <a href="../menu_paginas/carbo.html"><img src="../img/f1467d9f-ca0c-4175-b621-49bcfa12708d.png" alt=""></a>
-          </div>
+        <div class="info">
+          <i class="fa-brands fa-accessible-icon"></i>
         </div>
 
-        <div class="quesos"> 
-          <h4>Cuatro Quesos</h4>
-          <div class="contenedor__imagen__quesos">
-           <a href="../menu_paginas/quesos.html"><img src="../menu_paginas/img_menu/queso3.png" alt=""></a>
-          </div>
+        <div class="info">
+          <i class="fa-solid fa-mobile-screen-button"></i>
         </div>
-  
-        <div class="casa"> 
-          <h4>De la Casa</h4>
-          <div class="contenedor__imagen__casa">
-            <a href="../menu_paginas/casa.html"><img src="../img/delacasa.png" alt=""></a>
-          </div>
-    </main>
-  </div>
-  
+
+        <div class="info">
+          <h3>Horarios</h3>
+          <p>De Viernes a Domingo</p>
+          <p>De 20:00 a 00:00</p>
+        </div>
+
+      </div>
+    </footer>
+
   <script src="https://kit.fontawesome.com/d8ac08b888.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js " integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj " crossorigin="anonymous "></script>
 </body>

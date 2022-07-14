@@ -10,49 +10,7 @@ linear gradient
 320px
 
 
- <div class="casa"> 
-            <h4>De la Casa:</h4> 
-            <p>Salsa, tomate, albahaca, jamon, panceta, aceitunas, morron rojo, huevo, muzzarella y oregano.</p>
-            <p>Un metro 650/ Medio metro 350</p>
-        </div> 
+Nos interesa conocerte y saber tù opinion al respecto, saber que es lo que te gustaria, contenido que desees ver o cambios que harias. Recorda que tù opinion es de gran interes!
 
-          <div class="quesos"> 
-            <h4>4 Quesos:</h4>  
-            <p>Sin salsa, queso parmesano, queso dambo, queso roquefort, muzzarella, oregano.</p>
-            <p>Un metro 600/ Medio metro 330</p>
-        </div>
 
-          <div class="carbo">
-            <h4>Carbonara:</h4> 
-            <p>Salsa, queso parmesano, huevo cocido rallado, panceta,<br> muzzarella, oregano.</p>
-            <p> Un metro 600/ Medio metro 330</p>
-        </div>
 
-        <div class="portu">
-            <h4>Portuguesa:</h4> 
-            <p>Salsa, albahaca, tomate, huevo cocido, muzzarella, oregano.</p>
-            <p> Un metro 600/ Medio metro 330</p>
-        </div>
-
-        <div class="marga"> 
-            <h4>Margarita:</h4> 
-            <p> Salsa, tomate fresco, albahaca, muzzarella, oregano.</p>
-            <p>Un metro 520/ Medio metro 280</p>
-        </div>
-
-          <div class="muza">
-            <h4>Muzzarella</h4>
-            <p class="p__muza"> Salsa, muzzarella, oregano.</p>    
-            <p>Un metro 500/ Medio metro 270</p> 
-        </div>
-
-        @media screen and (max-width:480px){
-
-    #section-form{
-        height: 900px;
-    }
-
-    #footer{
-        height: 520px;
-    }
-}

@@ -5,18 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="./css/estilo.css">
     <title>Pizzeria La Migliore</title>
     <meta name="description" content="Pizzeria oriunda de Rivera, Uruguay. Productos caseros con mucha variedad de sabores.">
     <meta name="keywords" content="Pizza, Pizzeria, Comida, Pizzeria en Rivera, casero, pizzeria livramento">
   </head>
 
+  <body id="body-index">
+    
   <!--Barra de navegacion-->
-  <body class="body-index">
     <header>
       <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">La Migliore</a>
+          <a class="navbar-brand" href="index.html">La Migliore</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -32,7 +33,7 @@
                 <a class="nav-link" href="./seccion/info.html">Informacion</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#delivery">Delivery</a>
+                <a class="nav-link" href="./seccion/galeria.html">Galeria</a>
               </li>
               </ul>
                 <span class="navbar-text">
@@ -42,47 +43,69 @@
       </nav> 
     </header>
 
-    <!--Primera seccion-->
-    <main class="section-principal">
-      <h1 class="h1-index"> La Migliore</h1>
-      <p class="parrafo-principal"> Pizzeria oriunda de Rivera, Uruguay. <br>¡Productos caseros con mucha variedad de sabores!</p>
-      <button class="boton-menu"> 
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <a class="parrafo__boton__menu" href="./seccion/menu.html">Menu</a>
-      </button>
-    </main>
+      <!--SECTION PRINCIPAL-->
+    <main id="hero"> 
+      <div class="container">
+          <h1>La Migliore</h1>
+          <p>Pizzeria oriunda de Rivera, Uruguay. <br> Productos caseros con mucha variedad de sabores!</p>
 
-    <!--Segunda seccion-->
-    <section class="section-speciale"> 
-      <div class="contenedor__texto-speciale">
-        <h2 class="h2__section__speciale">La Pizza Speciale</h2>
-        <p class="parrafo-speciale">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ratione, explicabo velit repellendus nihil temporibus esse facere delectus ab quod eaque, perspiciatis id. Eaque, nostrum iste? Deserunt accusamus debitis dolorem.</p>
+          <form action="./seccion/menu.html">
+              <button class="boton-menu">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <a class="parrafo__boton__menu" href="./seccion/menu.html">Menu</a>
+              </button>
+          </form>
       </div>
-      <div class="contenedor__imagen-speciale">
-        <img src="./img/ pizzeria.png" alt="">
-      </div>
-    </section>
+  </main>
 
-    <!--Tercera seccion-->
-    <div class="contenedor__parrafo__img"> 
-      <div class="contenedor__parrafo__delivery">
-        <h2><a id="delivery"></a>¡Pedila! Nosotros te la llevamos </h2>
-      </div>
-      <div class="contendor__img__delivery">
-          <img src="/img/delivery2.png" alt="">
-      </div>
+    <!--SECTION DEL MEDIO-->
+  <section id="section-speciale">
+    <div class="container">
+
+        <div class="texto-speciale">
+            <h2>La pizza speciale</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti recusandae expedita labore? Id unde et hic facilis explicabo vel totam? Velit illo officiis provident voluptas doloremque laboriosam voluptatibus assumenda dolor.</p>
+        </div>  
+
+        <div class="img-container"></div>
     </div>
+  </section>
 
     <!--Footer index-->
     <footer id="footer-index"> 
-      <p class="parrafo__footer__migliore"> Migliore 2022</p> 
-      <p class="parrafo__footer__lucros"> Página sin fines de lucro ni comerciales</p>
+      <div class="container">
+
+        <div class="info">
+          <h3>Direccion</h3>
+          <p>Ansina 547, 40000 Rivera, Departamento de Rivera</p>
+        </div>
+
+
+        <div class="info">
+          <i class="fa-solid fa-motorcycle"></i>
+        </div>
+
+        <div class="info">
+          <i class="fa-brands fa-accessible-icon"></i>
+        </div>
+
+        <div class="info">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+        </div>
+
+        <div class="info">
+          <h3>Horarios</h3>
+          <p>De Viernes a Domingo</p>
+          <p>De 20:00 a 00:00</p>
+        </div>
+
+      </div>
     </footer>
 
     <script src="https://kit.fontawesome.com/d8ac08b888.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js " integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj " crossorigin="anonymous "></script>
   </body>
-</html> 
+</html>
