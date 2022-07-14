@@ -1,213 +1,223 @@
+
+
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+    
+}
+
 #body-contacto{
-    height: 100%;
-    overflow: hidden;
-    background-color: map-get($colores, "secundario");
-    background-repeat: repeat-x;
-    background-size: cover;
-    background-position: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-color: black;
+    background-color: #050E19;
 
     .section-form{
         display: flex;
-        justify-content: flex-end;
-        height: 80vh;
-        .formulario-contacto{
-            width: 500px;
-            height: 400px;
-            margin: 50px 40px;
-            border-radius: 3px; 
-            .form-contenedor{
-                padding: 40px;
-               
+        flex-direction: column;
+        
+
+        .container{
+            @include display;
+            padding: 20px;
+
+            form{
+            width: 100%;
+                .mb-3{
+                   
+                    .form-label{
+                        color: lightyellow;
+                    }
+                }
+            }
+        }
+
+        .parrafo-contacto{
+            width: 100%;
+            background-image: linear-gradient(0deg,  rgba(0,0,0,.5), rgba(0,0,0,0.0) ), url(/img/plato.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 350px;
+            display: flex;
+            /*pantalla grande size 100x100*/
+
+            .container{
+                display: flex;
+                justify-content:flex-start;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            
+                h4{
+                 font-size: 50px;
+                 font-variant:petite-caps;
+                 margin: 30px;
+                 color: lightyellow;
+                 text-shadow: 2px 2px 4px #000000;
+                 animation: lamiglioreh1;
+                 animation-duration: 2s;
+                 animation-iteration-count: infinite; 
+                }
+                @keyframes lamiglioreh1{
+                    0%{
+                        transform: scale(1);
+                    }
+                    20%{
+                        transform: scale(.3);
+                    }
+                    40%{
+                        transform: scale(.6);
+                    }
+                    60%{
+                        transform: scale(.9);
+                    }
+                    80%{
+                        transform: scale(1);
+                    }
+                }    
+                
+
                 p{
+                    color: white;
+                    width: 250px;
+                    font-size: large;
+                   
+                }
+        
+        
+            }
+        }
+    
+        .redes-contacto{
+       
+            .container{
                 display: flex;
                 justify-content: center;
-                font-size: x-large;
-                font-weight: bolder;
-                color: lightyellow;
-                }
+                align-items: center;
+                flex-direction: initial;
 
-                .form-tablas{
-                width: 100%;
-                margin: 5px 0;
-                padding: 5px;
-                border: 2px solid map-get($colores, "principal");
-                border-radius: 10px;  
+                a{
+                 margin: 10px;
                 }
-
-                .form-boton{
-                    margin: 30px 110px;
-                    width: 200px;
-                    height: 30px;
-                    background: white;
-                    color: map-get($colores, "principal");
-                    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                    font-size: medium;
-                    font-weight: bolder;
-                    border: 2px solid map-get($colores, "principal");
-                    border-radius: 10px; 
-                }  
-            }
-
-        }
-    }   
-    
-      
-    .parrafo-form{
-        @extend %display;
-        margin: 110px 10px;
-        height: 200px;
-        padding: 60px;
-
-        h4{
-            color:lightyellow;
-            font-family: cursive;
-            text-shadow: 0px 1px 2px map-get($colores, "principal");
-            animation: lamiglioreh1;
-            animation-duration: 2s;
-            animation-iteration-count: infinite; 
-           
-            @keyframes lamiglioreh1{
-                0%{
-                    transform: scale(1);
-                }
-                20%{
-                    transform: scale(.3);
-                }
-                40%{
-                    transform: scale(.6);
-                }
-                60%{
-                    transform: scale(.9);
-                }
-                80%{
-                    transform: scale(1);
-                }
-            }    
-        }
-
-        p{
-            font-size: large;
-            color:lightyellow; 
-            margin: 0 40px;
-        }
-        .parrafo-form-img{
-            margin: 10px 10px;
-            img{
-                margin: 10px 10px;
             }
         }
-    }
 
 
-    .footer-contacto{
-        position: relative;
-        height: 100px;
-        background-color: map-get($colores, "principal");
-
-        .parrafo__footer__migliore{
-        color: white;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        }
-        .parrafo__footer__lucros{
-        color: white;
-        position: absolute;
-        bottom: 30px;
-        left: 20px;
-        text-decoration: underline;
-        }
     
     }
 
-} 
+
+    #footer-index{
+        margin-top: 5rem;
+        background-color:#050E19;
+        padding: 1rem;
+        border-top: 2px solid white;
+
+        .container{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+
+            .info{
+                flex:0 0 calc(10% - 1rem);
+
+                h3{
+                    color: lightyellow;
+                }
+                p{
+                    color:white;
+                    margin: 0;
+                    font-size: smaller;
+                }   
+                .fa-solid{
+                    font-size: 50px;
+                    margin: 20px 15px;
+                    color: white;
+                }
+                .fa-brands{
+                    font-size: 50px;
+                    margin: 20px 15px;
+                    color: white;
+                }
+                
+                
+            }
+        }
+            
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*RESPONSIVE*/  /*RESPONSIVE*/ /*RESPONSIVE*/ /*RESPONSIVE*/ /*RESPONSIVE*/
 
 
-@media screen and (max-width:768px) {
-    #body-contacto{
-        height: 700px;
+@media screen and (min-width:780px) {
+    #body-contacto .section-form .parrafo-contacto{
+        background-position: center;
+       
     }
-    #body-contacto .section-form{
-        height: 100%;
-        position: relative;
+    #body-contacto .section-form .parrafo-contacto .container{
+        text-align: left;
+        display: flex;
+        flex-flow: revert;
     }
-    #body-contacto .section-form .formulario-contacto{
-        margin: 0;
-        position: absolute;
-        top:0;
-        right: 20%;
-        height: 300px;
-    }
-    #body-contacto .section-form .parrafo-form{
-        position: absolute;
-        bottom: 50px;
-        right: 30%;
-        width: 300px;
-    }
-    #body-contacto .section-form .parrafo-form p{
-        width: 600px;
-    }
-    #body-contacto .section-form .parrafo-form h4{
-        display: none;
+
+    #body-contacto .section-form .parrafo-contacto .container p{
+        width: 550px;
     }
 }
 
-@media screen and (max-width:480px){
-    #body-contacto{
-        width: 500px;
-    }
-    #body-contacto .section-form{
-        width: 500px;
-        position: relative;
-    }
-    #body-contacto .section-form .formulario-contacto{
-        height: 350px;
-        width: 490px;
-        position: absolute;
-        left: -1%;
-    }
-    #body-contacto .section-form .parrafo-form{
-        position: absolute;
-        bottom: 50px;
-        left: 20%;
-        width: 300px;
-        margin: 70px 0;
-    }
-    #body-contacto .section-form .parrafo-form p{
-        font-size: small;
-        width: 400px;
-    }
-    #body-contacto .section-form .parrafo-form h4{
-        display: block;
-    }
-    #body-contacto .section-form .parrafo-form .parrafo-form-img img{
-        width: 30px;
-        height: 30px;
+
+@media screen and (max-width:780px){
+    #body-contacto .section-form .parrafo-contacto{
+        height: 450px;
+        display: flex;
     }
 }
 
-@media screen and (max-width:320px){
-    #body-contacto .section-form{
-        height: 888px;
+
+
+
+
+ 
+/*FOOTER RESPONSIVE */  /*FOOTER RESPONSIVE */  /*FOOTER RESPONSIVE */ 
+
+    @media screen and (max-width:450px){
+        #body-contacto #footer-index{
+            background-color: #050E19;
+        }
+
+        #body-contacto #footer-index .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    
     }
-    #body-contacto .section-form .parrafo-form{
-        margin: 150px 0;
+
+
+
+    @media (max-width:780px){
+        #body-contacto .section-form .parrafo-contacto{
+            height: 450px;
+            display: flex;
+        }
     }
-    #body-contacto .section-form .parrafo-form p{
-        font-size: large;
-        width: 400px;
-    }
-    #body-contacto .section-form .parrafo-form h4{
-        display: block;
-        font-size: 30px;
-    }
-    #body-contacto .section-form .parrafo-form .parrafo-form-img img{
-        width: 50px;
-        height: 50px;
-    }
-}
+
+
+
+
+
 
